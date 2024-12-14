@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We’re Free Now</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: #00FFFF;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00FFFF;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 0px 0px 8px #00FFFF;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .article-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .article-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #00FFFF;
+            transition: transform 0.3s;
+        }
+
+        .article-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .article-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .activities {
+            margin-top: 30px;
+        }
+
+        .activities h2 {
+            color: #00FFFF;
+            text-align: center;
+            text-shadow: 0px 0px 6px #00FFFF;
+        }
+
+        .activity {
+            margin: 10px 0;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .activity:hover {
+            background-color: #004e92;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        #girl-image, #Movie_Anime-image {
+            display: none;
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #00FFFF;
+            margin-top: 10px;
+            animation: fadeIn 1s ease;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            color: #00FFFF;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        function showImage(id) {
+            const image = document.getElementById(id);
+            const allImages = document.querySelectorAll('#girl-image, #Movie_Anime-image');
+            allImages.forEach(img => img.style.display = 'none');
+            image.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>We’re Free Now</h1>
+    </header>
+
+    <div class="container">
+        <div class="article-image">
+            <img src="https://imgs.search.brave.com/9eZ92GrehAzPvNNEaxKj0th_wr1tZbA_9TifauKUQZo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQva2l6/dW1vbm9nYXRhcmkt/a295b21pLXZhbXAt/YW5ub3VuY2VkLXYw/LWRmOVQyODJfZldO/eWI3QTFmNElwMk8w/bXBZRU1US1NDV1hZ/OXk5ZXdlbW8uanBn/P3dpZHRoPTY0MCZj/cm9wPXNtYXJ0JmF1/dG89d2VicCZzPTE5/YTEyM2JhZjQyZmNk/ZDE0MzRmNTk0ZWEz/YWYwYzM3OTUyY2E2/ODM" alt="Someone’s already into this stuff">
+            <p><em>Someone’s already into this stuff</em></p>
+        </div>
+
+        <div class="article-content">
+            <p>The exam is finally over. This year we won’t need to attend school that much and won’t have to see the face of tyrant teachers like Harun Harami, Ganja, Sayem Babsoyai, or Monirrujaman Dami Kotha. </p>
+            <p>Since this is December and winter has arrived, it’ll be a lot of fun as all schools and coachings are off. The best part? We won’t have to see the faces of Harun Harami, Moniru Dami Kotha, and Sayem Babosayi anymore!</p>
+        </div>
+
+        <div class="activities">
+            <h2>What to Do Now?</h2>
+
+            <div class="activity" onclick="location.href='winter-picnics.html'">
+                <h3>Plan Winter Picnics</h3>
+            </div>
+
+            <div class="activity" onclick="location.href='friends-hangout.html'">
+                <h3>Go Out with Friends</h3>
+            </div>
+
+            <div class="activity" onclick="showImage('Movie_Anime-image')">
+                <h3>Watch Movies and Chill</h3>
+            </div>
+            <img id="Movie_Anime-image" src="https://imgs.search.brave.com/K15EhqEbRjF7NLdUt2hw3I170rTPVyjp_M2Jr-O-5qM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk1UVTJOakEx/T0Rnek1GNUJNbDVC/YW5CblhrRnRaVGd3/TVRNMk1USTRNakVA/LmpwZw" alt="Movies or Anime">
+
+            <div class="activity" onclick="showImage('girl-image')">
+                <h3>Finding Your Girl (not recommended)</h3>
+            </div>
+            <img id="girl-image" src="https://imgs.search.brave.com/1ZR9oh_FgUlrKOtbUQr-9tZ0Kif0YhHiZhMA-kz22Kc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzZhLzU5/L2U4LzZhNTllODJh/NmI4NzhmMGVmMTJl/YTQ2ZTE0YmZhZDU5/LmpwZw" alt="Finding Your Girl">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Winter Fun | Designed for those who love freedom</p>
+    </footer>
+</body>
+</html>
